@@ -2,8 +2,6 @@
 import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
-import CopyWebpackPlugin from "copy-webpack-plugin";
-
 export default {
   mode: "production",
   entry: "./src/index.js",
@@ -19,10 +17,6 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-    }),
-
-    new CopyWebpackPlugin({
-      patterns: [{ from: "public", to: "." }],
     }),
   ],
   module: {
